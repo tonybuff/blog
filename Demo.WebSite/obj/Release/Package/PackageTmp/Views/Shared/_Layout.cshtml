@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/themes/site.css")" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap core CSS -->
+    <link href="../../Content/admin/css/bootstrap.css" rel="stylesheet" />
+    <!--external css-->
+    <link href="/Content/admin/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <!-- Custom styles for this template-->
+    <link href="/Content/admin/css/style.css" rel="stylesheet">
+    <link href="/Content/admin/css/style-responsive.css" rel="stylesheet" /> 
+ 
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/Content/admin/js/html5shiv.js"></script>
+      <script src="/Content/admin/js/respond.min.js"></script>
+    <![endif]-->
+    <script src="/Content/admin/js/jquery.js"></script>
+
+    <script src="../../Content/admin/js/bootstrap.js"></script>
+    @RenderSection("head", false)
+</head>
+<body>
+
+    <div id="header">
+        <div class="wraper">
+            <div id="title">
+                我的 MVC 应用程序 
+            </div>
+            <div id="logindisplay">
+                @Html.Partial("_LogOnPartial")
+            </div>
+
+        </div>
+    </div>
+    <div id="menucontainer">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <ul class="nav" role="navigation">
+                    
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="/">首页</a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                            <li><a tabindex="-1" href="/" >返回首页</a></li>
+                            <li><a tabindex="-1" href="#">Another action</a></li>
+                            <li><a tabindex="-1" href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a tabindex="-1" href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">消费记录</a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                            <li><a tabindex="-1" href="/home/consumerecord" >查看消费记录</a></li>
+                            <li><a tabindex="-1" href="#">查看消费报表</a></li>
+                            <li><a tabindex="-1" href="#">查看当日消费</a></li>
+                            <li class="divider"></li>
+                            <li><a tabindex="-1" href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                   
+                </ul>
+            </div>
+        </div>
+    </div>
+  
+    <div class="page container">
+  
+        <div id="main">
+            @RenderBody()
+        </div>
+    </div>
+
+
+</body>
+</html>

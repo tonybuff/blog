@@ -1,0 +1,115 @@
+﻿@model List<Demo.Core.Models.Member>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/Admin_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <section class="panel">
+            <header class="panel-heading">
+                  用户管理页面
+            </header>
+            <div class="panel-body" style="padding:0 0 0 17px;">
+                
+                <div class="form">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                               
+                            <label class="control-label col-sm-2" style="padding-right:0px; "><input type="text" id="search-key" value="@ViewBag.SearchKey" style="width: 212px;" class="form-control search text-search"/></label>
+                            <label class="control-label col-sm-3" style="padding: 11px 0 0 0px;">
+                                <button class="btn btn-danger " onclick="topic.Search()">搜索</button><a href="/admin/home/topic"></a>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-striped table-advance table-hover">
+                <thead>
+                    <tr>
+                        <th><i class="icon-bullhorn"></i> 用户ID</th>
+                        <th><i class="icon-bullhorn"></i> 用户名</th>
+                        <th><i class="icon-bullhorn"></i> 昵称</th>
+                        <th class="hidden-phone"><i class="icon-question-sign"></i> 注册时间</th>
+                        <th><i class=" icon-edit"></i> 操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null && Model.Any())
+                    {
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td><a href="/">@item.Id</a></td>
+                                <td class="hidden-phone">@item.UserName</td>
+                                <td class="hidden-phone">@item.UnickName</td>
+                                <td class="hidden-phone">@item.CreateTime.ToString("yyyy-MM-dd")</td>
+                                <td>
+                                    <a href="/topic/@(item.Id).html" target="_blank"><button class="btn btn-success btn-xs" title="预览"><i class="icon-ok"></i>预览</button></a>
+                                    <a href="/admin/home/topic?id=@item.Id"><button class="btn btn-primary btn-xs" title="编辑"><i class="icon-pencil"></i>编辑</button></a>
+                                    <a href="#myModal@(item.Id)" data-toggle="modal"><button class="btn btn-danger btn-xs" title="登录日志" ><i class="icon-trash "></i>登录日志</button></a>
+                                     <div class="modal fade" id="myModal@(item.Id)" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog">
+                                              <div class="modal-content">
+                                                  <div class="modal-header">
+                                                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                      <h4 class="modal-title">登录日志</h4>
+                                                  </div>
+                                                  <div class="modal-body">
+                                                     <table class="table table-striped table-advance table-hover">
+                                                     <thead>
+                                                         <tr>
+                                                             <th><i class="icon-bullhorn"></i> 登录IP</th>
+                                                             <th><i class="icon-bullhorn"></i> 登录时间</th>
+                                                              
+                                                         </tr>
+                                                     </thead>
+                                                         <tbody>
+                                                             @if (item.LoginLogs.Any())
+                                                             {
+                                                                 foreach (var log in item.LoginLogs)
+                                                                 {
+                                                                      <tr>
+                                                                          <td>@log.IpAddress</td>
+                                                                          <td>@log.CreateTime.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                                                                      </tr>
+                                                                 }
+
+                                                             }
+                                                         </tbody>
+                                                    </table>
+                                                  </div>
+                                                  <div class="modal-footer">
+                                                      <button data-dismiss="modal" class="btn btn-default" type="button">关闭</button>
+                                                      <button data-dismiss="modal" class="btn btn-warning" type="button" onclick="topic.DeleteTopic(@item.Id)" > 确定</button>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="3">查无数据</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            @Html.Raw(ViewBag.Pager)
+        </section>
+    </div>
+</div>
+<style>
+    .text-search {
+        border: 1px solid #EAEAEA;
+        box-shadow: none;
+        color: #C8C8C8;
+        font-weight: 300;
+        margin-top: 5px;
+        transition: all 0.3s ease 0s;
+        width: 180px;
+    }
+</style>

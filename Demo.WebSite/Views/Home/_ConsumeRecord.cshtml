@@ -1,0 +1,32 @@
+﻿@model List<Demo.Site.Models.ConsumeRecordModel>
+<thead>
+    <tr><td>消费日期</td>
+        <td>消费类型</td>
+        <td>消费金额</td>
+        <td>消费人</td>
+    </tr>
+</thead>
+<tbody>
+    @if (Model != null && Model.Any())
+    {
+        foreach (var item in Model)
+        {
+            <tr @(item.Money>=50?"class=danger":"")>
+                <td>@item.CreateTime.ToString("yyyy-MM-dd")</td>
+                <td>@item.ConsumeType</td>
+                <td>@item.Money</td>
+                <td>@item.User</td>
+            </tr>
+
+        }
+    }
+    else
+    {
+        <tr><td colspan="3">没有数据</td></tr>
+    }
+</tbody>
+<tfoot>
+    <tr>
+        <td colspan="4">@Html.Raw(ViewBag.Pager)</td>
+    </tr>
+</tfoot>

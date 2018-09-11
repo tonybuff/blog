@@ -1,0 +1,8 @@
+﻿@using Demo.Site
+@if(UserHelper.IsAuthenticated) {
+    <text>欢迎 <strong>@UserHelper.Ticket[2]</strong>!
+    [ @Html.ActionLink("注销", "LogOff", "Account") ]</text>
+}
+else {
+    @:[ @Html.ActionLink("登录", "LogOn", "Account") ]
+}

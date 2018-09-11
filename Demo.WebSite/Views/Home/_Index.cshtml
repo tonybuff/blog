@@ -1,0 +1,17 @@
+﻿@model List<Demo.Site.Models.LoginLogModel>
+ 
+<tbody>
+    @if (Model != null && Model.Any())
+    {
+        foreach (var item in Model)
+        {
+        <tr>
+                <td>@item.Id</td>
+                <td>@item.IpAddress</td>
+                <td>@item.CreateTime.ToString("yyyy-MM-dd").</td></tr>
+       
+        }
+    }
+</tbody>
+    <tfoot><tr><td colspan="3">@Html.Raw(ViewBag.Pager)</td></tr></tfoot>
+ 

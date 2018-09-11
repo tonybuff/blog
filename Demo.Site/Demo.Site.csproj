@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC0DAF0E-0667-4C6B-B117-5EC0ACB743CB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Demo.Site</RootNamespace>
+    <AssemblyName>Demo.Site</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=3.3.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.3.3.0\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapter\CommonProfile.cs" />
+    <Compile Include="IAccountSiteContract.cs" />
+    <Compile Include="IConsumeRecordSiteContract.cs" />
+    <Compile Include="Imp\AccountSiteService.cs" />
+    <Compile Include="Imp\ConsumeRecordsSiteService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Unity\IoCContainer.cs" />
+    <Compile Include="UserHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Demo.Component.Data\Demo.Component.Data.csproj">
+      <Project>{61AD2A36-3BC5-4309-9541-8DE0AD13C80F}</Project>
+      <Name>Demo.Component.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Demo.Component.Tools\Demo.Component.Tools.csproj">
+      <Project>{57b43524-14e4-46bf-95f2-c7dfc9c77b0b}</Project>
+      <Name>Demo.Component.Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Demo.Core.Data\Demo.Core.Data.csproj">
+      <Project>{3637def0-a4c1-4d99-9117-2c9770810dd0}</Project>
+      <Name>Demo.Core.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Demo.Core.Models\Demo.Core.Models.csproj">
+      <Project>{FEA663F2-6292-4030-ADCF-9F80BFCE3EAD}</Project>
+      <Name>Demo.Core.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Demo.Core\Demo.Core.csproj">
+      <Project>{5baa28db-45fd-4561-85aa-3af52c1936b1}</Project>
+      <Name>Demo.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Demo.Site.Models\Demo.Site.Models.csproj">
+      <Project>{c90f2445-6da5-4f6a-9be8-0e3ed9d60db2}</Project>
+      <Name>Demo.Site.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
