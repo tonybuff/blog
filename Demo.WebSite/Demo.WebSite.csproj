@@ -21,9 +21,13 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <MvcProjectUpgradeChecked>true</MvcProjectUpgradeChecked>
-    <FileUpgradeFlags>40</FileUpgradeFlags>
-    <UpgradeBackupLocation>D:\练习\Blog2015-5-5\Blog\Backup1\</UpgradeBackupLocation>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -319,7 +323,9 @@
     <Content Include="Scripts\js\Index.js" />
     <Content Include="Scripts\js\JavaScript1.js" />
     <Content Include="Scripts\js\jquery.outerclick.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
