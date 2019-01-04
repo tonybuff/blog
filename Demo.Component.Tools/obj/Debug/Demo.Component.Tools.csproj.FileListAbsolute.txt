@@ -18,3 +18,12 @@ F:\BaiduYunDownload\Blog\Demo.Component.Tools\bin\Debug\Newtonsoft.Json.xml
 F:\BaiduYunDownload\Blog\Demo.Component.Tools\obj\Debug\Demo.Component.Tools.dll
 F:\BaiduYunDownload\Blog\Demo.Component.Tools\obj\Debug\Demo.Component.Tools.pdb
 F:\BaiduYunDownload\Blog\Demo.Component.Tools\obj\Debug\Demo.Component.Tools.csprojResolveAssemblyReference.cache
+D:\练习\Blog2015-5-5\Blog\Demo.Component.Tools\bin\Debug\Demo.Component.Tools.dll
+D:\练习\Blog2015-5-5\Blog\Demo.Component.Tools\bin\Debug\Demo.Component.Tools.pdb
+D:\练习\Blog2015-5-5\Blog\Demo.Component.Tools\bin\Debug\Microsoft.Practices.Unity.dll
+D:\练习\Blog2015-5-5\Blog\Demo.Component.Tools\bin\Debug\Newtonsoft.Json.dll
+D:\练习\Blog2015-5-5\Blog\Demo.Component.Tools\bin\Debug\Microsoft.Practices.Unity.xml
+D:\练习\Blog2015-5-5\Blog\Demo.Component.Tools\bin\Debug\Newtonsoft.Json.xml
+D:\练习\Blog2015-5-5\Blog\Demo.Component.Tools\obj\Debug\Demo.Component.Tools.csprojResolveAssemblyReference.cache
+D:\练习\Blog2015-5-5\Blog\Demo.Component.Tools\obj\Debug\Demo.Component.Tools.dll
+D:\练习\Blog2015-5-5\Blog\Demo.Component.Tools\obj\Debug\Demo.Component.Tools.pdb

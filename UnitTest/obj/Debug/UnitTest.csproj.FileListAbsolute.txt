@@ -1,0 +1,11 @@
+D:\练习\Blog2015-5-5\Blog\UnitTest\bin\Debug\UnitTest.dll
+D:\练习\Blog2015-5-5\Blog\UnitTest\bin\Debug\UnitTest.pdb
+D:\练习\Blog2015-5-5\Blog\UnitTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\练习\Blog2015-5-5\Blog\UnitTest\bin\Debug\System.Linq.Dynamic.dll
+D:\练习\Blog2015-5-5\Blog\UnitTest\bin\Debug\zh-Hans\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+D:\练习\Blog2015-5-5\Blog\UnitTest\obj\Debug\UnitTest.dll
+D:\练习\Blog2015-5-5\Blog\UnitTest\obj\Debug\UnitTest.pdb
+D:\练习\Blog2015-5-5\Blog\UnitTest\bin\Debug\Newtonsoft.Json.dll
+D:\练习\Blog2015-5-5\Blog\UnitTest\bin\Debug\Newtonsoft.Json.pdb
+D:\练习\Blog2015-5-5\Blog\UnitTest\bin\Debug\Newtonsoft.Json.xml
+D:\练习\Blog2015-5-5\Blog\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache

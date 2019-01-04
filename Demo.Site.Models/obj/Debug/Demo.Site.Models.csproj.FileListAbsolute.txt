@@ -8,3 +8,8 @@ F:\BaiduYunDownload\Blog\Demo.Site.Models\bin\Debug\Demo.Site.Models.pdb
 F:\BaiduYunDownload\Blog\Demo.Site.Models\obj\Debug\Demo.Site.Models.dll
 F:\BaiduYunDownload\Blog\Demo.Site.Models\obj\Debug\Demo.Site.Models.pdb
 F:\BaiduYunDownload\Blog\Demo.Site.Models\obj\Debug\Demo.Site.Models.csprojResolveAssemblyReference.cache
+D:\练习\Blog2015-5-5\Blog\Demo.Site.Models\bin\Debug\Demo.Site.Models.dll
+D:\练习\Blog2015-5-5\Blog\Demo.Site.Models\bin\Debug\Demo.Site.Models.pdb
+D:\练习\Blog2015-5-5\Blog\Demo.Site.Models\obj\Debug\Demo.Site.Models.csprojResolveAssemblyReference.cache
+D:\练习\Blog2015-5-5\Blog\Demo.Site.Models\obj\Debug\Demo.Site.Models.dll
+D:\练习\Blog2015-5-5\Blog\Demo.Site.Models\obj\Debug\Demo.Site.Models.pdb

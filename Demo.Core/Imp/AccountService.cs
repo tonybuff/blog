@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Linq.Dynamic;
 using Demo.Component.Tools;
 using Demo.Core.Models;
 using Demo.Core.Data.Repository;
